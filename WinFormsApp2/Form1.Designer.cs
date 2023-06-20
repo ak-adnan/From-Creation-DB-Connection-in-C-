@@ -35,6 +35,9 @@
             txtemail = new TextBox();
             txtcontact = new TextBox();
             btnsave = new Button();
+            label4 = new Label();
+            btnfind = new Button();
+            txtemailfind = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -102,11 +105,44 @@
             btnsave.UseVisualStyleBackColor = false;
             btnsave.Click += btnsave_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(632, 168);
+            label4.Name = "label4";
+            label4.Size = new Size(84, 20);
+            label4.TabIndex = 9;
+            label4.Text = "Enter Email";
+            label4.Click += label4_Click;
+            // 
+            // btnfind
+            // 
+            btnfind.BackColor = Color.CornflowerBlue;
+            btnfind.Location = new Point(806, 206);
+            btnfind.Name = "btnfind";
+            btnfind.Size = new Size(94, 29);
+            btnfind.TabIndex = 10;
+            btnfind.Text = "Find";
+            btnfind.UseVisualStyleBackColor = false;
+            btnfind.Click += btnfind_Click;
+            // 
+            // txtemailfind
+            // 
+            txtemailfind.Location = new Point(734, 165);
+            txtemailfind.Name = "txtemailfind";
+            txtemailfind.Size = new Size(243, 27);
+            txtemailfind.TabIndex = 11;
+            txtemailfind.TextChanged += txtemailfind_TextChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.Gold;
+            ClientSize = new Size(1050, 450);
+            Controls.Add(txtemailfind);
+            Controls.Add(btnfind);
+            Controls.Add(label4);
             Controls.Add(btnsave);
             Controls.Add(txtcontact);
             Controls.Add(txtemail);
@@ -114,10 +150,26 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            ForeColor = SystemColors.ControlText;
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void btnsearch_Click(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         #endregion
@@ -129,5 +181,8 @@
         private TextBox txtemail;
         private TextBox txtcontact;
         private Button btnsave;
+        private Label label4;
+        private Button btnfind;
+        private TextBox txtemailfind;
     }
 }
